@@ -1,4 +1,5 @@
 // merge two sorted ll
+// my code :
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
@@ -51,7 +52,7 @@ public:
 };	
 ITERATIVE APPROACH
 
-					// 😉😉😉😉Please upvote if it helps 😉😉😉😉
+			
 class Solution {
 public:
     ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
