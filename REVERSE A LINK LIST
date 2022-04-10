@@ -1,0 +1,34 @@
+// RECCURSIVE APPROACK 
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(head == NULL)return head ;
+        if(head->next==NULL)return head;
+        ListNode* h , *t;
+        h = reverseList(head->next);
+        t=head->next;
+        t->next = head ;
+        head->next = NULL;
+        return h ;
+    }
+};
+
+// ITERATIVE APPROACK
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(head == NULL)return head ;
+        if(head->next==NULL)return head;
+        ListNode *a , *b , *c;
+        a=NULL;
+        b= head ;
+        c = head->next ;
+        while(b!=NULL){
+            c=b->next ;
+            b->next = a;
+            a=b;
+            b=c;
+        }
+        return a;
+    }
+};
