@@ -12,6 +12,16 @@ public:
         return h ;
     }
 };
+// idead approach 
+void rev(ListNode* head){
+    ListNode* prev = NULL, *next=NULL ;
+    while(head!=NULL){
+    next = head->next;
+    head->next=prev;
+    prev=head;
+    head=next ;
+    }
+}
 
 // ITERATIVE APPROACK
 class Solution {
